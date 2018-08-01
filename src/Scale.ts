@@ -1,4 +1,4 @@
-import { Note, AlterationEnum } from './notes';
+import { Note, AlterationEnum } from './Note';
 import { ScaleFormula } from './formulas';
 
 export class Scale {
@@ -38,6 +38,14 @@ export class Scale {
                 for (let index of this.formula.raises) {
                     if (this.notes[index]) {
                         this.notes[index].up();
+                    }
+                }
+            }
+
+            if (this.formula.falls) {
+                for (let index of this.formula.falls) {
+                    if (this.notes[index]) {
+                        this.notes[index].down(1);
                     }
                 }
             }

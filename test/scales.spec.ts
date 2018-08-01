@@ -1,6 +1,5 @@
-import { Scale } from '../src/scales';
-import { Note, AlterationEnum } from '../src/notes';
-import { NaturalMinorFormula, MajorFormula, HarmonicMinorFormula, MelodicMinorFormula } from '../src/formulas';
+import { AlterationEnum, Note, Scale } from '../src';
+import { NaturalMinorFormula, MajorFormula, HarmonicMinorFormula, MelodicMinorFormula, HarmonicMajorFormula, MelodicMajorFormula } from '../src/formulas';
 
 describe('Scales testing suite', () => {
     it('should correctly works with invalid root note', () => {
@@ -18,6 +17,28 @@ describe('Scales testing suite', () => {
         }
 
         expect(resultScale).toEqual(['C', 'D', 'E', 'F', 'G', 'A', 'B', 'C']);
+    });
+
+    it("should correctly generate harmonic major scale", () => {
+        const note = new Note('c', AlterationEnum.None);
+        const scale = new Scale(note, HarmonicMajorFormula);
+        const resultScale = [];
+        for (let scaleNote of scale.notes) {
+            resultScale.push(scaleNote.toString());
+        }
+
+        expect(resultScale).toEqual(['C', 'D', 'E', 'F', 'G', 'Ab', 'B', 'C']);
+    });
+
+    it("should correctly generate melodic major scale", () => {
+        const note = new Note('c', AlterationEnum.None);
+        const scale = new Scale(note, MelodicMajorFormula);
+        const resultScale = [];
+        for (let scaleNote of scale.notes) {
+            resultScale.push(scaleNote.toString());
+        }
+
+        expect(resultScale).toEqual(['C', 'D', 'E', 'F', 'G', 'Ab', 'Bb', 'C']);
     });
 
     it('should correctly generate simple natural minor scales', () => {

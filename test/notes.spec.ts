@@ -1,4 +1,4 @@
-import { Note, AlterationEnum } from '../src/notes';
+import { Note, AlterationEnum } from '../src';
 
 describe('Notes.Note testing', () => {
     let note: Note;
