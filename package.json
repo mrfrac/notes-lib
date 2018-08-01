@@ -1,5 +1,5 @@
 {
-  "name": "guitar-lib",
+  "name": "notes-lib",
   "version": "0.0.1",
   "description": "Library with guitar stuff: scales, chords, progressions, etc",
   "main": "dist/index.js",
@@ -23,6 +23,8 @@
     "transform": {
       "^.+\\.tsx?$": "ts-jest"
     },
+    "collectCoverage": true,
+    "coverageReporters": ["json", "html"],
     "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
     "moduleFileExtensions": [
       "ts",

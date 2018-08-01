@@ -70,6 +70,6 @@ describe('Scales testing suite', () => {
             resultScale.push(scaleNote.toString());
         }
 
-        expect(resultScale).toEqual(['C', 'D', 'Eb', 'F', 'G', 'Ab', 'B', 'C']);
+        expect(resultScale).toEqual(['C', 'D', 'Eb', 'F', 'G', 'A', 'B', 'C']);
     });
 });
