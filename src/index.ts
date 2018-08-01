@@ -1,8 +1,8 @@
+import { AlterationEnum, Note } from './Note';
 import { Scale } from './Scale';
-import { Note, AlterationEnum } from './Note';
 
 export {
-    AlterationEnum,
-    Note,
-    Scale
+  AlterationEnum,
+  Note,
+  Scale,
 };
